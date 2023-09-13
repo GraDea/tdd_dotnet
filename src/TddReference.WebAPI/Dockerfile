@@ -1,14 +1,15 @@
 ﻿FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
 WORKDIR /app
-EXPOSE 80
-EXPOSE 443
+EXPOSE 8080
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
-WORKDIR /src
-COPY ["TddReference.WebAPI/TddReference.WebAPI.csproj", "TddReference.WebAPI/"]
-RUN dotnet restore "TddReference.WebAPI/TddReference.WebAPI.csproj"
-COPY . .
-WORKDIR "/src/TddReference.WebAPI"
+WORKDIR /app
+# Copy the project files and restore any dependencies
+COPY "src/TddReference.WebAPI/TddReference.WebAPI.csproj" ./
+RUN dotnet restore
+
+# Copy the remaining source code
+COPY src/TddReference.WebAPI/. ./
 RUN dotnet build "TddReference.WebAPI.csproj" -c Release -o /app/build
 
 FROM build AS publish
