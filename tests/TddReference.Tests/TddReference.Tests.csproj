@@ -23,4 +23,8 @@
         </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\..\src\TddReference.WebAPI\TddReference.WebAPI.csproj" />
+    </ItemGroup>
+
 </Project>
