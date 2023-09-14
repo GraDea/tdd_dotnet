@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TddReference.WebAPI", "TddReference.WebAPI\TddReference.WebAPI.csproj", "{2530A56F-C029-47BB-B087-4D39CF2857B7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TddReference.WebAPI", "src\TddReference.WebAPI\TddReference.WebAPI.csproj", "{2530A56F-C029-47BB-B087-4D39CF2857B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TddReference.Tests", "TddReference.Tests\TddReference.Tests.csproj", "{E1A38B94-0C8A-4A2E-870C-82F363B2FCAF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TddReference.Tests", "tests\TddReference.Tests\TddReference.Tests.csproj", "{E1A38B94-0C8A-4A2E-870C-82F363B2FCAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
