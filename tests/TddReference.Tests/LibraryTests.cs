@@ -13,4 +13,13 @@ public class LibraryTests
         library.Readers.Count.Should().Be(0);
         library.IsClosed.Should().BeTrue();
     }
+    [Fact]
+    public void Library_can_open()
+    {
+        var library = new Library();
+
+        library.Open();
+
+        library.IsClosed.Should().BeFalse();
+    }
 }

@@ -14,5 +14,10 @@ namespace TddReference.WebAPI.Domain
             Readers = new List<Reader>();
             IsClosed = true;
         }
+
+        public void Open()
+        {
+            IsClosed = false;
+        }
     }
 }
